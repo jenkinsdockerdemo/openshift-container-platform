@@ -108,20 +108,7 @@ And then **click** on **Save**.
 9.	Then you will be **redirected** to the Settings Blade of **AD App**. Click on the **Reply URLs**.
 <img src="../images/51reply_url.jpg"/>
 
-10.	Now **modify** the OpenShift console **url** by removing the ‘console’ from the end and appending **‘oauth2callback/AzureAD’** to the url and provide it in the Reply URL blade that come up and then Click on Save. 
-<img src="../images/52replyurl_save.jpg"/>
-
-11.	Now to verify that the user is able to **authenticate** to OpenShift console via Azure AD, **Open** a new tab in the browser and **paste** the **OpenShift Console URL** which you copied earlier.
-```
-Note: Skip the certificate warning
-```
-<img src="../images/67openshift_console.jpg"/>
-
-12.	Now click on **AzureAD**, you will be redirected to the **Login Page**. Provide the Azure credentials you received via email over there and click on **Sign in**.
-<img src="../images/68sign_in.jpg"/>
-
-13.	Once the login is **successful**, you will be redirected to the **OpenShift console**.
-<img src="../images/69openshift_cp.jpg"/>  
+  
 
 [<Previous](/docs/Lab%2001:%20Introduction-to-Azure-Portal.md) /
 [Next>](/docs/Lab%2003:%20Deploying-workload-on-Openshift.md)
