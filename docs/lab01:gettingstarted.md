@@ -2,11 +2,10 @@
  - [Option 1: Using Preconfigured Environment](#option-1-using-preconfigured-environment)
    * [Exercise 01: Sign Up for Pre-configured Environment](#exercise-01-sign-up-for-pre-configured-environment)
    * [Exercise 02: Log into your Azure Portal and Verify access to the Subscription](#exercise-02-log-into-your-azure-portal-and-verify-access-to-the-subscription)
- - [Option 2: Using own Subscription and configuring the Environment](#option-2-using-own-subscription-and-configuring-the-environment)
-   * [Exercise 01: Log into your Azure Portal and deploy the pre-requisite environment](#exercise-01-log-into-your-azure-portal-and-deploy-the-pre-requisite-environment)   
+  
 ### Lab Overview
 This lab will take you through Azure login and portal experience and the pre-requisite environment.
-If you do not have an Azure Subscription, or an environment where you can setup the pre-requisite for carrying out these labs, you should select [Option 1](#option-1-using-preconfigured-environment), else go to [Option 2](#option-2-using-own-subscription-and-configuring-the-environment)
+
 
 ### Prerequisites
 -	Windows or a Mac machine with HTML5 supported browser such as Microsoft Edge, Internet Explorer, Chrome or Firefox
@@ -83,129 +82,7 @@ The Resource Group shown here is for demo purpose only. Actual name of the Resou
 ![Role](../images/12role.jpg)
 
 Now, goto next lab.
-[<Previous](https://github.com/SpektraSystems/openshift-container-platform/blob/master/README.md) /
-[Next>](/docs/Lab%2002:%20Deploying-OpenShift-cluster-using-ARM-templates.md)
-
-
-### Option 2: Using own Subscription and configuring the Environment
-
-### Time Estimate
-
-30 minutes
-
-### Exercise 01: Log into your Azure Portal and deploy the pre-requisite environment
-
-In this exercise, you will log into the **Azure Portal** using your Azure credentials and you will deploy the pre-requisite environment.
-1.	**Launch** a browser and **Navigate** to https://portal.azure.com. Provide the credentials that you received via email. Click on **Sign In**.
-
-![Azure Login](../images/3azure_login2.jpg)
-![Azure Login](../images/3azure_login3.jpg)
-
-2.	Now, you will be directed to the **Azure Dashboard**
-
-![Azure Dashboard](../images/5azure_dashboard.jpg)
-
-
-3. **Click** on **Microsoft Azure** at the top left corner of the screen, to view the Dashboard.
-
-![Microsoft Azure](../images/7microsoftazure.jpg)
-
-4.	To toggle **show/hide** the Portal menu options with icon, **Click** on the **Show Menu** button. 
-
-![Azure Menu](../images/8azure_menu.jpg)
-
-
-5.	**Click** on the **Azure Active Directory** button in the **Menu navigation** bar to view the **Azure Active Directory** blade.
-<img src="../images/14selectazure_ad.jpg"/>
-
-6.	You will be directed to the Azure Active Directory blade, **click** on **App registrations**.
-<img src="../images/15app_reg.jpg"/>
-
-7.	In the next blade, **click** on **New Application Registration** on top of the blade.
-<img src="../images/16new_appreg.jpg"/>
-
-8.	In the **Create** blade, **configure** as follows:
-
--	Name: **(Provide a unique value)**
--	Application type: **Web app/API**
--	Sign-on URL: https://contoso.com
-
-```
-Note: We will change this value later during the lab.
-```
-
-And then **click** on **Create**.
-
-<img src="../images/17createapp.jpg"/>
-
-9.	You will be redirected to the **App registrations** blade. You can check the app has been created by typing the App Name in the search field.
-<img src="../images/18check_app.jpg"/>
-
-If the app has been created, you can see it in the results as shown above.
-
-10.	Click on the **app** you **created** and you will be directed to the App blade.
-
-11.	Copy the **Application Id** and **save** it in a notepad or any text editor for later use.
-<img src="../images/19app_id.jpg"/>
-
-12.	Now, **Click** on **Keys** in the settings blade.
-<img src="../images/20app_key.jpg"/>
-
-13.	In the **Keys** blade, **configure** as follows:
-
-- Description: **key1**
-- Expires: **Never expires**
-
-And **Click** on **Save.**
-
-<img src="../images/21save_key.jpg"/>
-
-14.	After you click on save, the **key value** will be displayed which is the Client Secret.
-**Copy** the value into the text editor where you saved the value of **Application Id** for later use.
-<img src="../images/22copy_key.jpg"/>
-
-```
-Note:
-You will use the above app details for Azure Integration in Lab 02: Exercise 3
-```
-
-15.	**Click** on the **Resource groups** button in the **Menu navigation** bar to view the **Resource groups** blade.
-
-"![Resource Group](../images/9resourcegroup.jpg)
-
-16.	You will be directed to the **Resource groups** blade, **click** on **+ Add**.
-
-"![Resource Group](../images/9resourcegroup1.jpg)
-
-17. In the **Create** blade, **configure** as follows and then **click** on **Create**.
-
--	Resource Group Name: **(Provide a unique value)**
--	Subscription: **(Select your subscription)**
--	Resource Group Location: **(Select any Location)**
-
-"![Resource Group](../images/9resourcegroup2.jpg)
-
-18.	Once the resource group is created, **Click** on the **Resource groups** button in the **Menu navigation** bar to view the **Resource groups** blade.
-
-"![Resource Group](../images/9resourcegroup.jpg)
-
-19.	You will see a **Resource Group** which you have created, **click** on it.
-
-20.	From the **Resource Group** blade that come up, **Select** the Access Control ( IAM ) which is on the left side of the blade.
-
-![Access Control](../images/11access_control.jpg)
-
-21.	In the new blade that come up, **click** on **+ Add**.
-
-![Access Control](../images/22access_control.jpg)
-
-22. In the **Add Permissions** blade, **configure** as follows and then **click** on **Save**.
-
--	Role: **Contributor**
--	Subscription: **Azure AD user, group, or application**
--	Select: **(Type the name of the app you created before and Select that)**
-
-![Access Control](../images/22access_control1.jpg)
-
 
 [Next>](/docs/Lab%2002:%20Deploying-OpenShift-cluster-using-ARM-templates.md)
+
+
