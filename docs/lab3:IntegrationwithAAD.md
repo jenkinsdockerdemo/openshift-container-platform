@@ -108,6 +108,8 @@ And then **click** on **Save**.
 9.	Then you will be **redirected** to the Settings Blade of **AD App**. Click on the **Reply URLs**.
 <img src="../images/51reply_url.jpg"/>
 
+10.	Now **modify** the OpenShift console **url** by removing the ‘console’ from the end and appending **‘oauth2callback/AzureAD’** to the url and provide it in the Reply URL blade that come up and then Click on Save. 
+<img src="../images/52replyurl_save.jpg"/>
   
 
 [<Previous](/docs/Lab%2001:%20Introduction-to-Azure-Portal.md) /
