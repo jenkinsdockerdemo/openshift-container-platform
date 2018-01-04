@@ -106,7 +106,29 @@ And then **click** on **Save**.
 
 10.	Now **modify** the OpenShift console **url** by removing the ‘console’ from the end and appending **‘oauth2callback/AzureAD’** to the url and provide it in the Reply URL blade that come up and then Click on Save. 
 <img src="../images/52replyurl_save.jpg"/>
-  
+ 
+17.	**Click** on **Cloud Shell**  at the top right corner of the screen, to open the cloud shell.
+<img src="../images/119bash.jpg"/> 
+
+3.	Then **Click** on **Bash ( Linux )**, and in the next page, **click** on **Show advanced settings**
+<img src="../images/25selectbash.jpg"/>
+<img src="../images/26advanced_settings.jpg"/>
+
+4.	In the new blade, select the existing resource group, provide unique names under Create new(Storage account and File share) and **click** on **Create Storage**.
+<img src="../images/27create_storage.jpg"/>
+
+5.	In a few minutes, the **bash shell** will come up.
+<img src="../images/28bashshell.jpg"/>
+
+
+19.	Now **execute** the following command. When promted, type **Yes** and you will be logged in to the OpenShift Master VM.
+```
+ssh ocpadmin@<copiedDNSNameofBastionVM>
+```
+```
+Note: Substitute in the above command with the value of copied DNS Name of Bastion VM 
+```
+<img src="../images/121openshif
 
 [<Previous](/docs/Lab%2001:%20Introduction-to-Azure-Portal.md) /
 [Next>](/docs/Lab%2003:%20Deploying-workload-on-Openshift.md)
