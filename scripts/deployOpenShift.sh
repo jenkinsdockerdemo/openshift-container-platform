@@ -30,9 +30,7 @@ STORAGEACCOUNT1=${23}
 SAKEY1=${24}
 COCKPIT=${25}
 AZURE=${26}
-AZUREADAPPNAME=${27}
-AADAUTHCLIENTID=${28}
-AADAUTHCLIENTSECRET="${29}"
+
 
 BASTION=$(hostname)
 
@@ -416,7 +414,7 @@ openshift_master_cluster_public_hostname=$MASTERPUBLICIPHOSTNAME
 openshift_master_cluster_public_vip=$MASTERPUBLICIPADDRESS
 
 # Enable HTPasswdPasswordIdentityProvider
-openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'},{'name': 'AzureAD', 'login': 'true', 'challenge': 'false', 'kind': 'OpenIDIdentityProvider', 'client_id': '$AADAUTHCLIENTID', 'client_secret': '$AADAUTHCLIENTSECRET', 'extra_scopes': [], 'extra_authorize_parameters': {}, 'claims': { 'id': ['sub'], 'preferredUsername': ['unique_name'], 'name': ['unique_name'], 'email': ['unique_name']}, 'urls': {'authorize': 'https://login.microsoftonline.com/$TENANTID/oauth2/authorize', 'token': 'https://login.microsoftonline.com/$TENANTID/oauth2/token'}}]
+openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
 
 # Setup metrics
 openshift_hosted_metrics_deploy=false
