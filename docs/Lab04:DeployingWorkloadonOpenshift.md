@@ -1,4 +1,4 @@
-## Lab 03: Deploying workload on OpenShift
+## Lab 04: Deploying workload on OpenShift
 
 * [Exercise 01: Deploy a 2 Tier Node JS Application on OpenShift](#exercise-01-deploy-a-2-tier-node-js-application-on-openshift)
 * [Exercise 02: Installing OpenShift CLI](#exercise-02-installing-openshift-cli)
@@ -9,7 +9,7 @@
 In this lab, we will deploy a workload on OpenShift.
 
 ### Prerequisites
-- Lab 02 must be completed
+- Lab 03 must be completed
 
 ### Time Estimate
 45 minutes
