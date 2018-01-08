@@ -105,12 +105,19 @@ And then **click** on **Save**.
 ocpadmin@<DNSNameofBastionVM>
 ```
 ```
+<img src="../images/putty1.jpg"/>
+
 Note: Substitute in the above command with the value of DNS Name of Bastion VM you received via mail 
 ```
 
 5. Now expand the SSH setting on the left side of the putty by clicking on **+SSH**. Then Select **Auth** 
 
+<img src="../images/authssh.jpg"/>
+<img src="../images/sshone.jpg"/>
+
 6. Then click on **Browse** and select the private key which you received via email and click on **Open**
+
+<img src="../images/browseopenssh.jpg"/>
 
 7. Now a new terminal will pop and you will be connected to the Bastion VM. The PuTTY Security Alert will pop up. Click on Yes.
 
@@ -118,6 +125,7 @@ Note: Substitute in the above command with the value of DNS Name of Bastion VM y
 ```
 ssh ocpcluster-master-0
 ```
+<img src="../images/masterlogin.jpg"/>
 
 9. Now open a new tab in a browser and go to https://raw.githubusercontent.com/SpektraSystems/openshift-container-platform/master/aadAuth.conf. Copy the contents to a text editor and edit the file and provide the following:
 - A. AzureAD
@@ -126,19 +134,26 @@ ssh ocpcluster-master-0
 - D. Tenant ID you received via email
 - E. Tenant ID you received via email
 
+<img src="../images/editcontent.jpg"/>
+
 10. Now copy the edited content from identityProviders to the end of the content and then **execute** the following command. 
 ```
 sudo vi /etc/origin/master/master-config.yaml
 ```
+<img src="../images/contentcopy.jpg"/>
+
 11. Now type '**/identity**' and hit enter. You will be directed to line starting with identityProviders. 
 Now type **i** to enter Insert Mode. 
 
 12. Keep the pointer at the starting of identityProvider word and then paste the edited content and then press Escape and then type '**wq!**' and hit enter.
 
+<img src="../images/viedit.jpg"/>
+
 13. Now **execute** the following command. 
 ```
 sudo systemctl restart atomic-openshift-master.service
 ``` 
+<img src="../images/servicerestart.jpg"/>
 
 14. Now to verify that the user is able to **authenticate** to OpenShift console via Azure AD, **Open** a new tab in the browser and **paste** the **OpenShift Console URL** you received via email.
 ```
