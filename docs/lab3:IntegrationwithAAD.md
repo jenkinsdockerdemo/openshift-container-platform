@@ -1,9 +1,9 @@
-## Lab 02: Deploying OpenShift cluster using ARM templates
+## Lab 02: Azure AD Integration
 
 * [Exercise 01: Create an Azure AD Application](#exercise-01-create-an-azure-ad-application)
 
 ### Lab Overview
-In this lab, you will learn how to **deploy the OpenShift Cluster** on **Azure** using ARM templates.
+In this lab, you will configure **Azure AD Authentication** in **OpenShift** .
 ### Prerequisites
 *	Lab 01 must be completed
 
@@ -72,56 +72,39 @@ And **Click** on **Save.**
 <img src="../images/54grant_permission.jpg"/>
 <img src="../images/55grantpermission_yes.jpg"/>
 
-## Exercise 04: Configure Azure AD Authentication
-In this exercise, you will configure the **AD App** you created for Authentication into the OpenShift console.
-1.	**Launch** a browser and **Navigate** to https://portal.azure.com. **Login** with the Microsoft Azure credentials you received via email.
-<img src="../images/43az_dashboard.jpg"/>
-
-2.	**Click** on the **Azure Active Directory** button in the **Menu navigation** bar to view the **Azure Active Directory** blade.
-<img src="../images/44az_ad.jpg"/>
-
-3.	You will be directed to the Azure Active Directory blade, **click** on **App registrations**.
-<img src="../images/45app_reg.jpg"/>
-
-4.	You will be redirected to the **App registrations** blade. You can search the App by typing the name of the App you created earlier, in the search field.
-<img src="../images/46select_app.jpg"/>
-
-5.	**Click** on the **app** you created and you will be directed to the App blade.
-<img src="../images/47app_blade.jpg"/>
-
-6.	Now Click on **Properties** under Settings blade.
+14.   Now go back to the setting blade of the App and Click on **Properties** under Settings blade.
 <img src="../images/48app_properties.jpg"/>
 
-7.	In the **Properties** blade, **edit** as follows:
+15.	In the **Properties** blade, **edit** as follows:
 -	App ID URI: (Provide the OpenShift Console URI)
 -	Home Page URL type: (Provide the OpenShift Console URI)
 And then **click** on **Save**.
 <img src="../images/49save_properties.jpg"/>
 
-8.	Once you save the **properties**, close the properties blade.
+16.	Once you save the **properties**, close the properties blade.
 <img src="../images/50close_properties.jpg"/>
 
-9.	Then you will be **redirected** to the Settings Blade of **AD App**. Click on the **Reply URLs**.
+17.	Then you will be **redirected** to the Settings Blade of **AD App**. Click on the **Reply URLs**.
 <img src="../images/51reply_url.jpg"/>
 
-10.	Now **modify** the OpenShift console **url** by removing the ‘console’ from the end and appending **‘oauth2callback/AzureAD’** to the url and provide it in the Reply URL blade that come up and then Click on Save. 
+18.	Now **modify** the OpenShift console **url** by removing the ‘console’ from the end and appending **‘oauth2callback/AzureAD’** to the url and provide it in the Reply URL blade that come up and then Click on Save. 
 <img src="../images/52replyurl_save.jpg"/>
  
-17.	**Click** on **Cloud Shell**  at the top right corner of the screen, to open the cloud shell.
+19.	**Click** on **Cloud Shell**  at the top right corner of the screen, to open the cloud shell.
 <img src="../images/119bash.jpg"/> 
 
-3.	Then **Click** on **Bash ( Linux )**, and in the next page, **click** on **Show advanced settings**
+20.	Then **Click** on **Bash ( Linux )**, and in the next page, **click** on **Show advanced settings**
 <img src="../images/25selectbash.jpg"/>
 <img src="../images/26advanced_settings.jpg"/>
 
-4.	In the new blade, select the existing resource group, provide unique names under Create new(Storage account and File share) and **click** on **Create Storage**.
+21.	In the new blade, select the existing resource group, provide unique names under Create new(Storage account and File share) and **click** on **Create Storage**.
 <img src="../images/27create_storage.jpg"/>
 
-5.	In a few minutes, the **bash shell** will come up.
+22.	In a few minutes, the **bash shell** will come up.
 <img src="../images/28bashshell.jpg"/>
 
 
-19.	Now **execute** the following command. When promted, type **Yes** and you will be logged in to the OpenShift Master VM.
+23.	Now **execute** the following command. When promted, type **Yes** and you will be logged in to the OpenShift Master VM.
 ```
 ssh ocpadmin@<copiedDNSNameofBastionVM>
 ```
