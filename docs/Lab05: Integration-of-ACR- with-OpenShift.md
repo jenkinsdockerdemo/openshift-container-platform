@@ -4,7 +4,7 @@
 In this lab, we will integrate ACR with OpenShift.
 
 ### Prerequisites
-- Lab 03 must be completed
+- Lab 04 must be completed
 
 ### Time Estimate
 45 minutes
