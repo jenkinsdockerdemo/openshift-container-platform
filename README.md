@@ -10,7 +10,7 @@
 - Tenant Id
 
 ### Labs Objective
-During this lab, you will deploy Open Shift cluster on Azure and integrate Azure AD Authentication and Azure Container Registry into Open Shift. Detailed steps to achieve this is as follows.
+During this lab, you will use pre-deployed Open Shift cluster on Azure and integrate Azure AD Authentication and Azure Container Registry into Open Shift. Detailed steps to achieve this is as follows.
 - Verify the resources in Azure Portal
 -	Create an Azure AD Application for Authentication
 -	Configure Azure AD Authentication
