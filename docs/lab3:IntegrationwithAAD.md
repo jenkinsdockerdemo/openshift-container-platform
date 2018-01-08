@@ -65,7 +65,7 @@ And **Click** on **Save.**
 **Copy** the value into the text editor where you saved the value of **Application Id** for later use.
 <img src="../images/22copy_key.jpg"/>
 
-12.   Now go back to the setting blade of the App and Click on **Required permissions.
+12.   Now go back to the setting blade of the App and Click on **Required permissions**.
 <img src="../images/53req_permission.jpg"/>
 
 13.   Click on **Grant Permissions** in the blade that come up and then **Click** on **Yes**
@@ -89,27 +89,16 @@ And then **click** on **Save**.
 
 18.	Now **modify** the OpenShift console **url** by removing the ‘console’ from the end and appending **‘oauth2callback/AzureAD’** to the url and provide it in the Reply URL blade that come up and then Click on Save. 
 <img src="../images/52replyurl_save.jpg"/>
- 
-19.	**Click** on **Cloud Shell**  at the top right corner of the screen, to open the cloud shell.
-<img src="../images/119bash.jpg"/> 
 
-20.	Then **Click** on **Bash ( Linux )**, and in the next page, **click** on **Show advanced settings**
-<img src="../images/25selectbash.jpg"/>
-<img src="../images/26advanced_settings.jpg"/>
-
-21.	In the new blade, select the existing resource group, provide unique names under Create new(Storage account and File share) and **click** on **Create Storage**.
-<img src="../images/27create_storage.jpg"/>
-
-22.	In a few minutes, the **bash shell** will come up.
-<img src="../images/28bashshell.jpg"/>
+19.	Using putty and the DNS Name of Bastion VM you received via email , Connect to the VM.
 
 
 23.	Now **execute** the following command. When promted, type **Yes** and you will be logged in to the OpenShift Master VM.
 ```
-ssh ocpadmin@<copiedDNSNameofBastionVM>
+ssh ocpadmin@<DNSNameofBastionVM>
 ```
 ```
-Note: Substitute in the above command with the value of copied DNS Name of Bastion VM 
+Note: Substitute in the above command with the value of DNS Name of Bastion VM you received via mail 
 ```
 <img src="../images/121openshif
 
