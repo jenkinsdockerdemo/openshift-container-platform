@@ -1,4 +1,4 @@
-## Lab 05: Additional Labs 
+## Lab 06: Additional Labs 
 
 
 For Additional Labs, you can visit https://github.com/RedHatWorkshops/openshiftv3-workshop
