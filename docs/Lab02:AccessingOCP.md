@@ -7,7 +7,7 @@ In this lab, you will access the Openshift Console of the already deployed clust
 *	Lab 01 must be completed
 
 ### Time Estimate
-120 minutes
+2 minute
 
 ### Exercise 01: Accessing Openshift Console
 
