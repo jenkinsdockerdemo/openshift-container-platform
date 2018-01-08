@@ -104,9 +104,9 @@ And then **click** on **Save**.
 ```
 ocpadmin@<DNSNameofBastionVM>
 ```
-```
 <img src="../images/putty1.jpg"/>
 
+```
 Note: Substitute in the above command with the value of DNS Name of Bastion VM you received via mail 
 ```
 
