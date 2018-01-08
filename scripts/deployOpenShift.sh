@@ -498,19 +498,28 @@ runuser -l $SUDOUSER -c "ansible all -b -m service -a \"name=NetworkManager stat
 # Initiating installation of OpenShift Container Platform using Ansible Playbook
 echo $(date) " - Installing OpenShift Container Platform via Ansible Playbook"
 
+#runuser -l $SUDOUSER -c "ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/config.yml"
+
+#if [ $? -eq 0 ]
+#then
+#   echo $(date) " - OpenShift Cluster installed successfully"
+#else
+#   echo $(date) " - OpenShift Cluster failed to install"
+#   exit 6
+#fi
 var1='1'
-until  [ var1 = '1' ] 
+#until  [ var1 = '1' ] 
+while [ var1 -ne 0 ]
 do
   runuser -l $SUDOUSER -c "ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/config.yml"
   if [ $? -eq 0 ]
-  then
-     echo $(date) " - OpenShift Cluster installed successfully"
-     var1='0'
-  else
-     echo $(date) " - OpenShift Cluster failed to install"
-     var1='1'
-  fi
+  then 
+     var1= 0
+   else
+     echo "Opwnshift Installation Restarted"
+   fi
 done
+
 echo $(date) " - Modifying sudoers"
 
 sed -i -e "s/Defaults    requiretty/# Defaults    requiretty/" /etc/sudoers
