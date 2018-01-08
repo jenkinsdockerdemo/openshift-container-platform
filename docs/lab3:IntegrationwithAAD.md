@@ -1,4 +1,4 @@
-## Lab 02: Azure AD Integration
+## Lab 03: Azure AD Integration
 
 * [Exercise 01: Create an Azure AD Application](#exercise-01-create-an-azure-ad-application)
 * [Exercise 02: Configure Azure AD Authentication](#exercise-02-configure-azure-ad-authentication)
