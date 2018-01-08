@@ -112,8 +112,9 @@ Note: Substitute in the above command with the value of DNS Name of Bastion VM y
 
 5. Now expand the SSH setting on the left side of the putty by clicking on **+SSH**. Then Select **Auth** 
 
-<img src="../images/authssh.jpg"/>
 <img src="../images/sshone.jpg"/>
+<img src="../images/authssh.jpg"/>
+
 
 6. Then click on **Browse** and select the private key which you received via email and click on **Open**
 
