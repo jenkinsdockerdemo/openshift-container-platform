@@ -87,6 +87,6 @@ The Resource Group shown here is for demo purpose only. Actual name of the Resou
 
 Now, goto next lab.
 
-[Next>](/docs/Lab%2002:AccessingOCP.md)
+[Next>](/docs/Lab02:AccessingOCP.md)
 
 
