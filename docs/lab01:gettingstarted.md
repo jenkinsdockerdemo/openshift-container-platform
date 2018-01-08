@@ -1,5 +1,5 @@
  ## Lab 01: Introduction to Azure Portal
- - [Option 1: Using Preconfigured Environment](#option-1-using-preconfigured-environment)
+ - [Using Preconfigured Environment](#using-preconfigured-environment)
    * [Exercise 01: Sign Up for Pre-configured Environment](#exercise-01-sign-up-for-pre-configured-environment)
    * [Exercise 02: Log into your Azure Portal and Verify access to the Subscription](#exercise-02-log-into-your-azure-portal-and-verify-access-to-the-subscription)
   
@@ -12,7 +12,7 @@ This lab will take you through Azure login and portal experience and the pre-req
 -	Red Hat Customer Portal login credentials so that the Azure instances can be registered with Red Hat Subscription Manager properly, and you must have enough OpenShift Container Platform entitlements to cover the chosen configuration.
 
 
-### Option 1: Using Preconfigured Environment
+### Using Preconfigured Environment
 
 ### Time Estimate
 
