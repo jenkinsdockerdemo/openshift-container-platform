@@ -515,12 +515,12 @@ until  [ var1 = '2' ] #
   runuser -l $SUDOUSER -c "ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/config.yml"
   if [ $? -eq 0 ]
   then 
+     echo "Openshift Installation Successfull"
     var1= 2
    else
-     echo "Opwnshift Installation Restarted"
-     runuser -l $SUDOUSER -c "ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/config.yml"
-     var1= 2
+     echo "Openshift Installation Restarted"
    fi
+   var1= var1 + 1
 done
 
 echo $(date) " - Modifying sudoers"
