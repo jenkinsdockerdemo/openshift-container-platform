@@ -504,8 +504,9 @@ if [ $? -eq 0 ]
 then
    echo $(date) " - OpenShift Cluster installed successfully"
 else
-   echo $(date) " - OpenShift Cluster failed to install"
-   exit 6
+   echo $(date) " - OpenShift Cluster failed to install, restarting deployment"
+   runuser -l $SUDOUSER -c "ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/config.yml"
+ #  exit 6
 fi
 #var1='1'
 #until  [ var1 = '1' ] #
