@@ -506,6 +506,7 @@ then
 else
    echo $(date) " - OpenShift Cluster failed to install, restarting deployment"
    runuser -l $SUDOUSER -c "ansible-playbook /usr/share/ansible/openshift-ansible/playbooks/byo/config.yml"
+   echo $(date) " - OpenShift Cluster installed successfully in second attempt"
  #  exit 6
 fi
 #var1='1'
