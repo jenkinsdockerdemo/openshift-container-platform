@@ -73,11 +73,15 @@ Note:
 The Resource Group shown here is for demo purpose only. Actual name of the Resouce Group that you see may differ.
 ```
 
-8.	From the **Resource Group** blade that come up, **Select** the Access Control ( IAM ) which is on the left side of the blade.
+8. In the **Resource Group** blade that come up, you can see the deployed resources.
+
+![Access Control](../images/1resource.jpg)
+
+9.	From the **Resource Group** blade, **Select** the Access Control ( IAM ) which is on the left side of the blade.
 
 ![Access Control](../images/11access_control.jpg)
 
-9.	In the new blade that come up, you can see the **role** that is assigned to you.
+10. In the new blade that come up, you can see the **role** that is assigned to you.
 
 ![Role](../images/12role.jpg)
 
