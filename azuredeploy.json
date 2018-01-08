@@ -8,7 +8,7 @@
                 "description": "Base URL for Template Files",
                 "artifactsBaseUrl": ""
             },
-            "defaultValue": "https://raw.githubusercontent.com/jenkinsdockerdemo/openshift-container-platform/master"
+            "defaultValue": "https://raw.githubusercontent.com/ossspektra/openshift-container-platform/master"
         },
 
         "adminUsername": {
@@ -30,7 +30,7 @@
         "rhsmUsernamePasswordOrActivationKey": {
             "type": "string",
             "minLength": 1,
-            "defaultValue": "usernamepassword",
+            "defaultValue": "activationkey",
             "allowedValues": [
                 "usernamepassword", "activationkey"
             ],
@@ -39,7 +39,7 @@
             }
         },
         "rhsmUsernameOrOrgId": {
-            "type": "string",
+            "type": "securestring",
             "minLength": 1,
             "metadata": {
                 "description": "Red Hat Subscription Manager Username or Organization ID. If usernamepassword selected in previous input, then use Username; otherwise entier Organization ID. To find your Organization ID, run on registered server: subscription-manager identity"
@@ -53,14 +53,14 @@
             }
         },
         "rhsmPoolId": {
-            "type": "string",
+            "type": "securestring",
             "minLength": 1,
             "metadata": {
                 "description": "Red Hat Subscription Manager Pool ID with OpenShift entitlements. To find it, run on registered server: subscription-manager list"
             }
         },
         "sshPublicKey": {
-            "type": "string",
+            "type": "securestring",
             "metadata": {
                 "description": "SSH public key for all VMs"
             }
@@ -69,7 +69,7 @@
             "type": "string",
             "minLength": 1,
             "metadata": {
-                "description": "Resource Group name that containes the Key Vault" 
+                "description": "Resource Group name that containes the Key Vault"
             }
         },
         "keyVaultName": {
@@ -80,14 +80,14 @@
             }
         },
         "keyVaultSecret": {
-            "type": "string",
+            "type": "securestring",
             "minLength": 1,
             "metadata": {
                 "description": "Key Vault Secret Name that contains the Private Key"
             }
         },
         "azureIntegrationClientId": {
-            "type": "string",
+            "type": "securestring",
             "minLength": 1,
             "metadata": {
                 "description": "Azure Integration Client ID"
@@ -111,7 +111,7 @@
         "enableLogging": "true",
         "enableCockpit": "true",
 
-        "enableAzure": "false",
+        "enableAzure": "true",
         "aadClientId": "[parameters('azureIntegrationClientId')]",
         "aadClientSecret": "[parameters('azureIntegrationClientSecret')]",
         "masterVmSize": "Standard_DS2_v2",
@@ -1512,17 +1512,18 @@
             "type": "string",
             "value": "[reference(variables('infraLbPublicIpDnsLabel')).dnsSettings.fqdn]"
         },
-        "Node OS Storage Account Name": {
+        "adminUsername": {
             "type": "string",
-            "value": "[variables('newStorageAccountNodeOs')]"
+            "value": "[parameters('adminUsername')]"
         },
-        "Node Data Storage Account Name": {
+        "openshiftPassword": {
             "type": "string",
-            "value": "[variables('newStorageAccountNodeData')]"
+            "value": "[parameters('openshiftPassword')]"
         },
-        "Infra Storage Account Name": {
+        "tenantId": {
             "type": "string",
-            "value": "[variables('newStorageAccountInfra')]"
+            "value": "[subscription().tenantId]"
         }
+
     }
 }
