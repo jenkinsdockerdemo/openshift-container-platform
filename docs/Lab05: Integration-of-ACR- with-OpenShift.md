@@ -1,4 +1,4 @@
-## Lab 04: Integration of ACR with OpenShift
+## Lab 05: Integration of ACR with OpenShift
 
 ### Lab overview
 In this lab, we will integrate ACR with OpenShift.
