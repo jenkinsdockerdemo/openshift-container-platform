@@ -23,5 +23,5 @@ Note: Skip the certificate warning
 3.	Once the login is **successful**, you will be redirected to the **OpenShift console**.
 <img src="../images/69openshift_cp.jpg"/>
 
-[<Previous](/docs/Lab01:AccessingOCP.md) /
+[<Previous](/docs/Lab01:GettingStarted.md) /
 [Next>](/docs/Lab03:IntegrationwithAAD.md)
