@@ -160,4 +160,4 @@ Note: Substitute for ACRLoginServerUri in the above command
 <img src="../images/135repositoriesview.jpg"/> 
 
 [<Previous](/docs/Lab04:DeployingWorkloadonOpenshift.md) /
-[Next>](/docs/Lab%2006:%20Additional-Labs.md)
+[Next>](/docs/Lab06:%20Additional-Labs.md)
