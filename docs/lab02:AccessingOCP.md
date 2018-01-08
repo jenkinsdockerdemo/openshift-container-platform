@@ -1,8 +1,5 @@
 ## Lab 02: Accessing OpenShift Console
 
-* [Exercise 01: Create an Azure AD Application](#exercise-01-create-an-azure-ad-application)
-
-   
  
 ### Lab Overview
 In this lab, you will learn how to **deploy the OpenShift Cluster** on **Azure** using ARM templates.
@@ -12,7 +9,7 @@ In this lab, you will learn how to **deploy the OpenShift Cluster** on **Azure**
 ### Time Estimate
 120 minutes
 
-### Exercise 01: Access Openshift Console
+### Exercise 01: Accessing Openshift Console
 
 1.	Now to login to *OpenShift console*, **Open** a new tab in the browser and **paste** the **OpenShift Console URL** which you received via email.
 ```
