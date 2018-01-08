@@ -15,13 +15,12 @@ In this lab, you will access the Openshift Console of the already deployed clust
 ```
 Note: Skip the certificate warning
 ```
-<img src="../images/67openshift_console.jpg"/>
+<img src="../images/login1.jpg"/>
 
-2.	 Provide the credentials you received via email over there and click on **Sign in**.
-<img src="../images/68sign_in.jpg"/>
+2.	 Provide the credentials you received via email over there and click on **Login**.
 
 3.	Once the login is **successful**, you will be redirected to the **OpenShift console**.
-<img src="../images/69openshift_cp.jpg"/>
+<img src="../images/login2.jpg"/>
 
 [<Previous](/docs/Lab01:GettingStarted.md) /
 [Next>](/docs/Lab03:IntegrationwithAAD.md)
