@@ -7,7 +7,7 @@
 ### Lab Overview
 In this lab, you will configure **Azure AD Authentication** in **OpenShift** .
 ### Prerequisites
-*	Lab 01, 02 must be completed
+*	Lab 02 must be completed
 
 ### Time Estimate
 120 minutes
