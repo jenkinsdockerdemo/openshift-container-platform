@@ -1,6 +1,8 @@
 ## Lab 02: Azure AD Integration
 
 * [Exercise 01: Create an Azure AD Application](#exercise-01-create-an-azure-ad-application)
+* [Exercise 02: Configure Azure AD Authentication](#exercise-02-configure-azure-ad-authentication)
+
 
 ### Lab Overview
 In this lab, you will configure **Azure AD Authentication** in **OpenShift** .
@@ -10,7 +12,7 @@ In this lab, you will configure **Azure AD Authentication** in **OpenShift** .
 ### Time Estimate
 120 minutes
 
-### Exercise 01: Create an Azure AD Application
+### Exercise 01: Create and Configure Azure AD Application
 In this exercise, you will create an Azure AD App and retrieve the Client ID and Client secret values.
 1.	**Launch** a browser and **Navigate** to https://portal.azure.com. **Login** with the Microsoft Azure credentials you received via email.
 <img src="../images/6azure_dashboard.jpg"/>
@@ -90,17 +92,65 @@ And then **click** on **Save**.
 18.	Now **modify** the OpenShift console **url** by removing the ‘console’ from the end and appending **‘oauth2callback/AzureAD’** to the url and provide it in the Reply URL blade that come up and then Click on Save. 
 <img src="../images/52replyurl_save.jpg"/>
 
-19.	Using putty and the DNS Name of Bastion VM you received via email , Connect to the VM.
+### Exercise 02: Configure Azure AD Authentication
 
+1.	Using putty and the DNS Name of Bastion VM you received via email , Connect to the VM.
 
-23.	Now **execute** the following command. When promted, type **Yes** and you will be logged in to the OpenShift Master VM.
+2. Download Putty from here. http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+
+23. Now run putty.exe from you PC
+
+4. Enter the following to the Host Name (or IP address) box of the putty.
 ```
-ssh ocpadmin@<DNSNameofBastionVM>
+ocpadmin@<DNSNameofBastionVM>
 ```
 ```
 Note: Substitute in the above command with the value of DNS Name of Bastion VM you received via mail 
 ```
-<img src="../images/121openshif
+
+5. Now expand the SSH setting on the left side of the putty by clicking on **+SSH**. Then Select **Auth** 
+
+6. Then click on **Browse** and select the private key which you received via email and click on **Open**
+
+7. Now a new terminal will pop and you will be connected to the Bastion VM. The PuTTY Security Alert will pop up. Click on Yes.
+
+8.	Now **execute** the following command. 
+```
+ssh ocpcluster-master-0
+```
+
+9. Now open a new tab in a browser and go to https://raw.githubusercontent.com/SpektraSystems/openshift-container-platform/master/aadAuth.conf. Copy the contents to a text editor and edit the file and provide the following:
+- A. AzureAD
+- B. Client Id of the app created before
+- C. Client Secret of the App created before 
+- D. Tenant ID you received via email
+- E. Tenant ID you received via email
+
+10. Now copy the edited content from identityProviders to the end of the content and then **execute** the following command. 
+```
+sudo vi /etc/origin/master/master-config.yaml
+```
+11. Now type /identity and hit enter. You will be directed to line starting with identityProviders. 
+Now type **i** to enter Insert Mode. 
+
+12. Keep the pointer at the starting of identityProvider word and then paste the edited content and then press Escape and then type 'wq!' and hit enter.
+
+13. Now **execute** the following command. 
+```
+sudo systemctl restart atomic-openshift-master.service
+``` 
+
+14. Now to verify that the user is able to **authenticate** to OpenShift console via Azure AD, **Open** a new tab in the browser and **paste** the **OpenShift Console URL** you received via email.
+```
+Note: Skip the certificate warning
+```
+<img src="../images/67openshift_console.jpg"/>
+
+15.	Now click on **AzureAD**, you will be redirected to the **Login Page**. Provide the Azure credentials you received via email over there and click on **Sign in**.
+<img src="../images/68sign_in.jpg"/>
+
+16.	Once the login is **successful**, you will be redirected to the **OpenShift console**.
+<img src="../images/69openshift_cp.jpg"/>
 
 [<Previous](/docs/Lab%2001:%20Introduction-to-Azure-Portal.md) /
 [Next>](/docs/Lab%2003:%20Deploying-workload-on-Openshift.md)
