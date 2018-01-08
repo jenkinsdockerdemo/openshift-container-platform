@@ -2,7 +2,7 @@
 
  
 ### Lab Overview
-In this lab, you will learn how to **deploy the OpenShift Cluster** on **Azure** using ARM templates.
+In this lab, you will access the Openshift Console of the already deployed cluster
 ### Prerequisites
 *	Lab 01 must be completed
 
