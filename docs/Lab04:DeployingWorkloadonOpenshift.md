@@ -115,65 +115,71 @@ $ export PATH=$PATH:~/OpenShift
 
 ### Exercise 03: Deployment in OpenShift using CLI
 In this exercise, you will learn how to create a new project on OpenShift and how to create an application from an existing docker image.
-1.	Launch the command line and run below command and enter **username** and **password** as you have received in your lab mail.
-```
-oc login <URL of OpenShift:8443>
-```
+1.	Now, open a new tab in a broswer and **navigate** to the **OpenShift console url**. **Login** into the OpenShift console by Selecting AzureAD as authentication type.
 
-2.	Create an **OpenShift project** by running below command. 
+2. Click on down arrow key as shown in below screenshot and click on **Command Line Tools**.
+<img src="../images/81cl_tools.jpg"/>  
+
+3. Copy the oc login command.
+<img src="../images/ocpclilogin.jpg"/>
+
+4. Launch the command line and run the above command to login in to Openshift
+
+
+5.	Create an **OpenShift project** by running below command. 
 
 ```
 oc new-project mycliproject1 --description="My CLI Project" --display-name="CLI Project" 
 ```
 <img src="../images/85openshift_cmnd.jpg"/> 
 
-3.	Now you can see the **project** is created successfully.
+6.	Now you can see the **project** is created successfully.
 ```
 oc get projects
 ```
 
-4.	You can also check the **status** of the **project** by running the following command.
+7.	You can also check the **status** of the **project** by running the following command.
 ```
 oc status
 ``` 
 <img src="../images/86openshift_cmnd.jpg"/> 
 
-5.	Create new **application** using below command 
+8.	Create new **application** using below command 
 ```
 oc new-app redhatworkshops/welcome-php --name=welcome
 ``` 
 <img src="../images/87openshift_cmnd.jpg"/> 
 
-6.	The above command uses the **docker image** to deploy a docker container in a pod. you will notice that a deployed pod runs and it starts an application pod as shown below.
+9.	The above command uses the **docker image** to deploy a docker container in a pod. you will notice that a deployed pod runs and it starts an application pod as shown below.
 ```
 oc get pods
 ``` 
 <img src="../images/88openshift_cmnd.jpg"/> 
 
-7.	To view the list of **services** in the project, run the following command 
+10.	To view the list of **services** in the project, run the following command 
 ```
 oc get services
 ``` 
 <img src="../images/89openshift_cmnd.jpg"/> 
 
-8.	Now add a route to the service with the following command.
+11.	Now add a route to the service with the following command.
 ```
 oc expose service welcome --name=welcomehost 
 ``` 
 <img src="../images/90openshift_cmnd.jpg"/> 
 
-9.	Now go to your **OpenShift platform Console ** and navigate to your project, click on the hostname in the overview page and you can access the **application** from the browser and see the result.
+12.	Now go to your **OpenShift platform Console ** and navigate to your project, click on the hostname in the overview page and you can access the **application** from the browser and see the result.
 
 <img src="../images/ocphostname.jpg"/> 
 <img src="../images/91browser.jpg"/> 
 
-10.	To view all the **components** that were created in your **project**, run the command given below.
+13.	To view all the **components** that were created in your **project**, run the command given below.
 ```
 oc get all
 ``` 
 <img src="../images/92vew_allproject.jpg"/> 
 
-11.	Now you can **delete** all these **components** by running one command.
+14.	Now you can **delete** all these **components** by running one command.
 ```
 oc delete all --all
 ```
