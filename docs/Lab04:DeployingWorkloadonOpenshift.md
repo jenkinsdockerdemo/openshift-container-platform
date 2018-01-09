@@ -121,6 +121,10 @@ oc login <URL of OpenShift:8443>
 ```
 
 2.	Create an **OpenShift project** by running below command. 
+
+```
+oc new-project mycliproject1 --description="My CLI Project" --display-name="CLI Project" 
+```
 <img src="../images/85openshift_cmnd.jpg"/> 
 
 3.	Now you can see the **project** is created successfully.
@@ -169,7 +173,7 @@ oc get all
 
 11.	Now you can **delete** all these **components** by running one command.
 ```
-oc get all --all
+oc delete all --all
 ```
 <img src="../images/93delete.jpg"/> 
 
