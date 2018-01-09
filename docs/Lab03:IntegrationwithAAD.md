@@ -146,7 +146,7 @@ sudo vi /etc/origin/master/master-config.yaml
 11. Now copy the edited content from identityProviders to the end of the file and open the existing putty session you are using and type '**/identity**' and hit enter. You will be directed to line starting with identityProviders. 
 Now type **i** to enter Insert Mode. 
 
-12. Keep the pointer at the starting of identityProvider word and press "**delete**" button until "identityProviders:" is deleted(Make sure to not delete the line) and then paste the edited content by right clicking. Then press Escape and type '**:wq!**' and hit enter.
+12. Keep the pointer at the starting of identityProvider word and press "**delete**" button until "identityProviders:" is deleted(Make sure to not delete the line) and then paste the edited content by right clicking. Then press "**Escape**" button and type '**:wq!**' and hit enter.
 
 <img src="../images/viedit.jpg"/>
 
