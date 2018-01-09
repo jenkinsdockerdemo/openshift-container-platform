@@ -162,7 +162,7 @@ oc expose service welcome --name=welcomehost
 ``` 
 <img src="../images/90openshift_cmnd.jpg"/> 
 
-9.	Now go to your **OpenShift platform Console ** and navigate to your project and then select applications, click on the hostname in the applications windows and you can access the **application** from the browser and see the result.
+9.	Now go to your **OpenShift platform Console ** and navigate to your project, click on the hostname in the overview page and you can access the **application** from the browser and see the result.
 
 <img src="../images/ocphostname.jpg"/> 
 <img src="../images/91browser.jpg"/> 
