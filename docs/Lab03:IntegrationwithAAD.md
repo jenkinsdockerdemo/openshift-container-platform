@@ -130,20 +130,20 @@ ssh ocpcluster-master-0
 
 9. Now open a new tab in a browser and go to https://raw.githubusercontent.com/SpektraSystems/openshift-container-platform/master/aadAuth.conf. Copy the contents to a text editor and edit the file and provide the following:
 - A. Type **AzureAD** after removing other text
-- B. Client Id of the app created before
+- B. Application Id of the app created before
 - C. Client Secret of the App created before 
 - D. Tenant ID you received via email
 - E. Tenant ID you received via email
 
 <img src="../images/editcontent.jpg"/>
 
-10. Now copy the edited content from identityProviders to the end of the content and then **execute** the following command. 
+10. Now **execute** the following command in the putty session. 
 ```
 sudo vi /etc/origin/master/master-config.yaml
 ```
 <img src="../images/contentcopy.jpg"/>
 
-11. Now type '**/identity**' and hit enter. You will be directed to line starting with identityProviders. 
+11. Now copy the edited content from identityProviders to the end of the file and open the putty session and type '**/identity**' and hit enter. You will be directed to line starting with identityProviders. 
 Now type **i** to enter Insert Mode. 
 
 12. Keep the pointer at the starting of identityProvider word and then paste the edited content by right clicking and then press Escape and type '**wq!**' and hit enter.
