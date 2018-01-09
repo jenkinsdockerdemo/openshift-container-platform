@@ -151,7 +151,7 @@ Now type **i** to enter Insert Mode.
 <img src="../images/viedit.jpg"/>
 
 ```
-Note: Make sure you don't change the indentation of the contents while copying or pasting
+Note: Make sure you don't change the indentation of the contents while copying or pasting, else the setup will fail
 ```
 
 13. Now **execute** the following command. 
