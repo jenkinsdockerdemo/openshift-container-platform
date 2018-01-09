@@ -71,6 +71,10 @@ OpenShift ships with a feature rich web console as well as command line tools to
 1.	To download the Openshift CLI, navigate to https://spektraazurelabs.blob.core.windows.net/ocpodl/ocpclitools.html
 <img src="../images/ocpcli.jpg"/>  
 
+```
+Note: If the link is downloading the html page, open that ocpclitools.html file in a browser
+```
+
 2.	Based on the operating system you are using, click on **Download Now**.
 
 3.	Once the file has been downloaded, you will need to **extract** the **contents** of the same at below directories.</br>
