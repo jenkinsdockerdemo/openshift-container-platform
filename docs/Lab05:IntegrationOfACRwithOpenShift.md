@@ -66,25 +66,9 @@ Copy the **Registry name**, **Login server**, **Username** and **password** to a
 15.	From the details blade, copy the **Private Ip** of the node in which the Pod is running.
 <img src="../images/117copy_details.jpg"/> 
 
-16.	Now, **Open** a new tab in a browser and **Navigate** to https://portal.azure.com. **Login** with the Microsoft Azure credentials you received via email.
-<img src="../images/43az_dashboard.jpg"/> 
+16. Using putty and the DNS Name of Bastion VM you received via email , Connect to the Bastion VM.
 
-17.	**Click** on **Cloud Shell**  at the top right corner of the screen, to open the cloud shell.
-<img src="../images/119bash.jpg"/> 
-
-18.	Now the **bash shell** will open up.
-<img src="../images/120bashshell.jpg"/> 
-
-19.	Now **execute** the following command. When promted, type **Yes** and you will be logged in to the OpenShift Master VM.
-```
-ssh ocpadmin@<copiedDNSNameofBastionVM>
-```
-```
-Note: Substitute in the above command with the value of copied DNS Name of Bastion VM 
-```
-<img src="../images/121openshift_cmnd.jpg"/> 
-
-20.	Now **execute** the following command in the cloud shell to pull a **docker image**. Copy the key into a text editor for later use.
+17.	Now **execute** the following command to pull a **docker image**. Copy the key into a text editor for later use.
 ```
 ssh ocpadmin@<copiedPrivateIpOfNode>
 ```
@@ -93,19 +77,19 @@ Note: Substitute in the above command with the value of copied Private IP Addres
 ``` 
 <img src="../images/122openshift_cmnd.jpg"/> 
 
-21.	Now **execute** the following command in the cloud shell to **login** in to root account. 
+18.	Now **execute** the following command to **login** in to root account. 
 ```
 sudo su -
 ```
 <img src="../images/123openshift_cmnd.jpg"/> 
 
-22.	Now **execute** the following command in the cloud shell to check if the **docker** is **installed and running**. 
+22.	Now **execute** the following command to check if the **docker** is **installed and running**. 
 ```
 docker -v 
 ``` 
 <img src="../images/124openshift_cmnd.jpg"/> 
 
-23.	Now **execute** the following command in the cloud shell to **display** the list the **docker images** in the system. 
+23.	Now **execute** the following command to **display** the list the **docker images** in the system. 
 ```
 docker images
 ```
@@ -114,7 +98,7 @@ docker images
 24.	From the displayed results, **copy** the **Image name** with todoapp in the end.
 <img src="../images/126openshift_cmnd.jpg"/> 
 
-25.	Now **execute** the following command in the cloud shell to **tag** the existing docker image.
+25.	Now **execute** the following command to **tag** the existing docker image.
 ```
 docker tag <ImageName> <ACRLoginServerUri>/sample/todoapp
 ```
@@ -123,7 +107,7 @@ Note: 	Substitute for ImageName and ACR Login Server URI with the copied values 
 ```
 <img src="../images/127openshift_cmnd.jpg"/> 
 
-26.	Now **execute** the following command in the cloud shell to **login to docker registry**. When prompted, enter the **password** for ACR you copied earlier
+26.	Now **execute** the following command to **login to docker registry**. When prompted, enter the **password** for ACR you copied earlier
 ```
 docker login <acrServerLoginServerUri> -u <ACRUsername>
 ```
@@ -132,7 +116,7 @@ Note: Substitute for ACR Login Server URI and Username in the above command
 ```
 <img src="../images/128openshift_cmnd.jpg"/> 
 
-27.	Now **execute** the following command in the cloud shell to **push** the tagged **image** to azure container Registry. Copy the key into a text editor for later use.
+27.	Now **execute** the following command to **push** the tagged **image** to azure container Registry. Copy the key into a text editor for later use.
 ```
 docker push <ACRLoginServerUri>/sample/todoapp
 ```
@@ -141,7 +125,7 @@ Note: Substitute for ACRLoginServerUri in the above command
 ``` 
 <img src="../images/129openshift_cmnd.jpg"/> 
 
-28.	Once you have pushed the image to Azure Container Registry, click on **More services** on the left side of the menu on the dashboard.
+28.	Once you have pushed the image to Azure Container Registry, go back to the browser tab where Azure portal is opened. Click on **More services** on the left side of the menu on the dashboard.
 <img src="../images/130az_moreservices.jpg"/> 
 
 29.	In the new blade that come up, search in the Filter box at the top “Container registries” and then Select **Container Registries** from the search result.
