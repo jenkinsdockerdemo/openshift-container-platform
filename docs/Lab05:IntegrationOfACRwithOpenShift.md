@@ -93,19 +93,19 @@ docker -v
 ```
 docker images
 ```
-<img src="../images/125openshift_cmnd.jpg"/> 
+<img src="../images/dockimage.jpg"/> 
 
-24.	From the displayed results, **copy** the **Image name** with todoapp in the end.
-<img src="../images/126openshift_cmnd.jpg"/> 
+24.	From the displayed results, **copy** the **Image name** with time in the end.
+<img src="../images/dockimage1.jpg"/> 
 
 25.	Now **execute** the following command to **tag** the existing docker image.
 ```
-docker tag <ImageName> <ACRLoginServerUri>/sample/todoapp
+docker tag <ImageName> <ACRLoginServerUri>/sample/time
 ```
 ```
 Note: 	Substitute for ImageName and ACR Login Server URI with the copied values in the above command
 ```
-<img src="../images/127openshift_cmnd.jpg"/> 
+<img src="../images/docktag.jpg"/> 
 
 26.	Now **execute** the following command to **login to docker registry**. When prompted, enter the **password** for ACR you copied earlier
 ```
@@ -114,7 +114,7 @@ docker login <acrServerLoginServerUri> -u <ACRUsername>
 ```
 Note: Substitute for ACR Login Server URI and Username in the above command
 ```
-<img src="../images/128openshift_cmnd.jpg"/> 
+<img src="../images/docklogin.jpg"/> 
 
 27.	Now **execute** the following command to **push** the tagged **image** to azure container Registry. Copy the key into a text editor for later use.
 ```
@@ -123,7 +123,7 @@ docker push <ACRLoginServerUri>/sample/todoapp
 ```
 Note: Substitute for ACRLoginServerUri in the above command
 ``` 
-<img src="../images/129openshift_cmnd.jpg"/> 
+<img src="../images/dockpush.jpg"/> 
 
 28.	Once you have pushed the image to Azure Container Registry, go back to the browser tab where Azure portal is opened. Click on **More services** on the left side of the menu on the dashboard.
 <img src="../images/130az_moreservices.jpg"/> 
@@ -140,8 +140,8 @@ Note: Substitute for ACRLoginServerUri in the above command
 32.	Now to check whether the image has been pushed to the repository, you can click on **Repositories** under Services on the menu on left side of the blade.
 <img src="../images/134repositories.jpg"/> 
 
-33.	In the next blade that come up, if the push has been **successful**, you can see sample/todapp repository there. 
-<img src="../images/135repositoriesview.jpg"/> 
+33.	In the next blade that come up, if the push has been **successful**, you can see sample/time repository there. 
+<img src="../images/acrtime.jpg"/> 
 
 [<Previous](/docs/Lab04:DeployingWorkloadonOpenshift.md) /
 [Next>](/docs/Lab06:%20Additional-Labs.md)
