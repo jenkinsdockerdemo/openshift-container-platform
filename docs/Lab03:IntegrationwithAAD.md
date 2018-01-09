@@ -129,7 +129,7 @@ ssh ocpcluster-master-0
 <img src="../images/masterlogin.jpg"/>
 
 9. Now open a new tab in a browser and go to https://raw.githubusercontent.com/SpektraSystems/openshift-container-platform/master/aadAuth.conf. Copy the contents to a text editor and edit the file and provide the following:
-- A. AzureAD
+- A. Type **AzureAD** after removing other text
 - B. Client Id of the app created before
 - C. Client Secret of the App created before 
 - D. Tenant ID you received via email
