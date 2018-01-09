@@ -118,7 +118,7 @@ Note: Substitute for ACR Login Server URI and Username in the above command
 
 27.	Now **execute** the following command to **push** the tagged **image** to azure container Registry. Copy the key into a text editor for later use.
 ```
-docker push <ACRLoginServerUri>/sample/todoapp
+docker push <ACRLoginServerUri>/sample/time
 ```
 ```
 Note: Substitute for ACRLoginServerUri in the above command
