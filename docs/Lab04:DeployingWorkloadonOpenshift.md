@@ -72,7 +72,7 @@ OpenShift ships with a feature rich web console as well as command line tools to
 <img src="../images/ocpcli.jpg"/>  
 
 ```
-Note: If the link is downloading the html page, open that ocpclitools.html file in a browser
+Note: If the above link is getting downloaded when you click on it, open that ocpclitools.html file in a browser
 ```
 
 2.	Based on the operating system you are using, click on **Download Now**.
