@@ -217,27 +217,8 @@ oc  logs build/time-1
 6.	Now, we will do **deployment configuration** by running the following command.
 ```
 oc get dc -o json
-{
-    "apiVersion": "v1",
-    "items": [
-        {
-            "apiVersion": "v1",
-            "kind": "DeploymentConfig",
-            "metadata": {
-                "annotations": {
-                    "openshift.io/generated-by": "OpenShiftNewApp"
-                },
-…………
-…………
-…………
-                "creationTimestamp": "2017-11-10T11:22:28Z",
-                "generation": 3,
-                "labels": {
-    "metadata": {},
-    "resourceVersion": "",
-    "selfLink": ""
-}
 ```
+<img src="../images/ocgetdc.jpg"/>
 
 7.	Now, you can get the **list of pods**, Run the following command given below.
 ```
