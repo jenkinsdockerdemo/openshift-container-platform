@@ -214,7 +214,7 @@ oc  logs build/time-1
 ```
 <img src="../images/98build_logs.jpg"/>
 
-6.	Now, we will do **deployment configuration** by running the following command.
+6.	Now, we will get **deployment configuration** by running the following command.
 ```
 oc get dc -o json
 ```
