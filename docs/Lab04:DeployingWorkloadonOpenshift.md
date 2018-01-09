@@ -67,19 +67,13 @@ OpenShift ships with a feature rich web console as well as command line tools to
 -	Linux
 
 #### Installing the CLI
-The easiest way to **download** the **CLI** is by accessing the **Command line tools** page on the web console.
-1.	Click on down arrow key as shown in below screenshot and click on **Command Line Tools**.
-<img src="../images/81cl_tools.jpg"/>  
 
-2.	On **Command Line Tools** page, click on **Latest Release**.
-<img src="../images/82cl_latestrelease.jpg"/>  
+1.	To download the Openshift CLI, navigate to https://spektraazurelabs.blob.core.windows.net/ocpodl/ocpclitools.html
+<img src="../images/ocpcli.jpg"/>  
 
-3.	Now, you need to **login** in to your **red hat account**(one which has license for OpenShift)
-<img src="../images/83redhatlogin.jpg"/>
+2.	Based on the operating system you are using, click on **Download Now**.
 
-4.	Scroll down and click on **download**.
-
-5.	Once the file has been downloaded, you will need to **extract** the **contents** of the same at below directories.</br>
+3.	Once the file has been downloaded, you will need to **extract** the **contents** of the same at below directories.</br>
 Windows: 	**C:\OpenShift**</br>
 OS X: 		**~/OpenShift**</br>
 Linux: 		**~/OpenShift**</br>
@@ -96,7 +90,7 @@ $ tar zxvf <File_Name>
 $ tar zxvf <File_Name>
 ```
 
-6.	Now you will need to add **oc** to your system’s environment variable path:</br>
+4.	Now you will need to add **oc** to your system’s environment variable path:</br>
 **Windows** : Open Command prompt and run below command:
 ```
 set PATH=%PATH%;C:\OpenShift
@@ -112,7 +106,7 @@ $ export PATH=$PATH:~/OpenShift
 $ export PATH=$PATH:~/OpenShift
 ```
 
-7.	Now run below command on shell/command prompt to check the **version** of OpenShift client an to verify that it is successfully configured.
+5.	Now run below command on shell/command prompt to check the **version** of OpenShift client an to verify that it is successfully configured.
 <img src="../images/84check_version.jpg"/>  
 
 ### Exercise 03: Deployment in OpenShift using CLI
