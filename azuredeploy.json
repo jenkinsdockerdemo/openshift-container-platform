@@ -112,6 +112,9 @@
         "enableCockpit": "true",
 
         "enableAzure": "false",
+
+        "keyvaultname": "[concat(parameters('keyVaultName'),substring(subscription().subscriptionId,0,4))]",
+
         "aadClientId": "[parameters('azureIntegrationClientId')]",
         "aadClientSecret": "[parameters('azureIntegrationClientSecret')]",
         "masterVmSize": "Standard_DS2_v2",
@@ -1486,7 +1489,7 @@
                     "sshPrivateKey": {
                         "reference": {
                             "keyvault": {
-                                "id": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', parameters('keyVaultRGName'), '/providers/Microsoft.KeyVault/vaults/', parameters('keyVaultName'))]"
+                                "id": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', parameters('keyVaultRGName'), '/providers/Microsoft.KeyVault/vaults/', variables('keyVaultName'))]"
                             },
                             "secretName": "[parameters('keyVaultSecret')]"
                         }
